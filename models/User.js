@@ -31,7 +31,6 @@ const profileSchema = new Schema(
     {
         toJSON: {
             virtuals: true,
-            getters: true,
         },
     }
 );
