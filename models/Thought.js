@@ -14,6 +14,7 @@ const thoughtsSchema = Schema(
             type: Date,
             default: Date.now,
             // TODO: add getter method to format timestamp on query
+            get: timestamp => new Date(timestamp).toLocaleDateString()
         },
         username: {
             type: String,
@@ -24,6 +25,7 @@ const thoughtsSchema = Schema(
     {
         toJSON: {
             getters: true,
+            virtuals: true,
         },
     }
 );
