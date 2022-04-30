@@ -1,14 +1,9 @@
 const router = require('express').Router();
-const getUsers = require('../../controllers/userController');
 const { User } = require('../../models');
+const {getUsers, getUserById, createUser, deleteUser, updateUser, addFriend, removeFriend} = require('../../controllers/userController')
 
-router.get('/', async (req, res) => {
-    try{
-        const userTestData = await User.findAll()
-        res.status(200).json(userTestData)
-    } catch (err) {
-        res.status(500).json(`THIS IS WRONG`)
-    }
-});
 
+router.route('/').get(getUsers).post(createUser);
+router.route('/:id').get(getUserById).delete(deleteUser).put(updateUser);
+router.route('/:userId/friends/:friendId').post(addFriend).delete(removeFriend)
 module.exports = router;
