@@ -16,6 +16,8 @@
 
 ## DESCRIPTION
 
+This is a backend database API that utilizes NoSQL modules like MongoDB and Mongoose to run a social network service. The service allows for users to create user profiles, react to posts(thoughts), add/delete friends and update posts and information.
+
 ## APPLICATION IN USE
 
 LINK TO APPLICATION IN USE VIDEO
@@ -23,22 +25,30 @@ LINK TO APPLICATION IN USE VIDEO
 
 ## INSTALLATION
 
+I began this process by creating my server.js and connection.js files to build a boilerplate foundation to build my models and controllers off of. The next step was to create my models for Users, Reactions, and Thoughts based on the parameters set in the assignments acceptance criteria. The next step was to create my routes files and build basic get requests to test the functionality of the application and check for errors.
+
 Connection.js File
+
 ![ConnectionJS](./assets/connectionJS.PNG "Connection.js File")
 
 Server.js File
+
 ![ServerJS](./assets/serverJS.PNG "Server.js File")
 
 User Routes File
+
 ![UserRoutes](./assets/userRoutes.PNG "User Routes File")
 
 User Controllers
+
 ![UserControllers](./assets/userController-example.PNG "User Controllers Example")
 
 Profile Schema Model
+
 ![ProfileSchema](./assets/profileSchema-model.PNG "Profile Schema Model")
 
 Reaction Schema for Thoughts
+
 ![ReactionShema](./assets/reactionSchema.PNG "Reaction Schema")
 
 
