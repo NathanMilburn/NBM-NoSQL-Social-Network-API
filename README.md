@@ -3,8 +3,8 @@
 ## USER STORY
 
     AS A web developer
-    I WANT to create 
-    SO THAT 
+    I WANT to create a backend database API for a social network using NoSQL,MongoDB and Mongoose
+    SO THAT users can easily add, update, or remove profiles, friends, thoughts and reactions.
 
 ## TABLE OF CONTENTS
 
@@ -23,6 +23,23 @@ LINK TO APPLICATION IN USE VIDEO
 
 ## INSTALLATION
 
+Connection.js File
+![ConnectionJS](./assets/connectionJS.PNG "Connection.js File")
+
+Server.js File
+![ServerJS](./assets/serverJS.PNG "Server.js File")
+
+User Routes File
+![UserRoutes](./assets/userRoutes.PNG "User Routes File")
+
+User Controllers
+![UserControllers](./assets/userController-example.PNG "User Controllers Example")
+
+Profile Schema Model
+![ProfileSchema](./assets/profileSchema-model.PNG "Profile Schema Model")
+
+Reaction Schema for Thoughts
+![ReactionShema](./assets/reactionSchema.PNG "Reaction Schema")
 
 
 ## LICENSE
@@ -33,7 +50,8 @@ The license included for the project is under MIT
 
 ## CONTRIBUTING
 
-
+UW Full-Stack Web Development Boot Camp Class Repo - Week 18 NoSQL
+https://uwa.bootcampcontent.com/UWA-Bootcamp/uw-blv-virt-fsf-pt-12-2021-u-c/-/tree/master/18-NoSQL
 
 ## QUESTIONS
 
