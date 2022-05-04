@@ -24,6 +24,7 @@ const userController = {
       });
   },
   createUser(req, res) {
+    console.log(req.body)
     User.create(req.body)
       .then((userData) => {
         res.status(200).json(userData);

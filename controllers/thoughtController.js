@@ -1,6 +1,7 @@
 const { User, Thought } = require("../models");
 const reactionSchema = require("../models/Reaction");
 const mongoose = require("mongoose");
+const { findById, findOneAndUpdate } = require("../models/User");
 
 const thoughtController = {
   getThoughts(req, res) {
@@ -24,7 +25,13 @@ const thoughtController = {
   createNewThought(req, res) {
     Thought.create(req.body)
       .then((thoughts) => {
-        res.status(200).json(thoughts);
+        // findOneAndUpdate(thoughts)
+        console.log(thoughts)
+        return User.findOneAndUpdate({username: thoughts.username}, {$push: {thoughts: thoughts._id}}, {new: true})
+      })
+      .then((user) => {
+        console.log(user)
+        res.status(200).json(user);
       })
       .catch((err) => {
         res.status(500).json(err);
