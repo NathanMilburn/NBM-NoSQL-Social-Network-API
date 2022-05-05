@@ -14,7 +14,7 @@ const thoughtController = {
       });
   },
   getThoughtById(req, res) {
-    Thought.findById({ _id: req.params.thoughtId })
+    Thought.findById({ _id: req.params.id })
       .then((thoughts) => {
         res.status(200).json(thoughts);
       })
@@ -76,7 +76,7 @@ const thoughtController = {
   deleteReaction(req, res) {
     Thought.findByIdAndDelete(
       { _id: req.params.thoughtId },
-      { $pull: { reactions: { reactionId: req.params.reactionId } } },
+      { $pull: { reactions: { reactionId: req.params.Id } } },
       { runValidators: true, new: true }
     )
       .then((thought) => {

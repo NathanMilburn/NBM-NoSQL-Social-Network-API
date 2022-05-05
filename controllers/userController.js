@@ -1,4 +1,3 @@
-// TODO: Check this out later.
 const { User, Thought } = require("../models");
 const mongoose = require('mongoose');
 

@@ -20,12 +20,12 @@ This is a backend database API that utilizes NoSQL modules like MongoDB and Mong
 
 ## APPLICATION IN USE
 
-LINK TO APPLICATION IN USE VIDEO
+LINK TO APPLICATION IN USE VIDEO [HERE](https://www.youtube.com/watch?v=O8MjQYx7yAU)
 
 
 ## INSTALLATION
 
-I began this process by creating my server.js and connection.js files to build a boilerplate foundation to build my models and controllers off of. The next step was to create my models for Users, Reactions, and Thoughts based on the parameters set in the assignments acceptance criteria. The next step was to create my routes files and build basic get requests to test the functionality of the application and check for errors.
+I began this process by creating my server.js and connection.js files to build a boilerplate foundation to build my models and controllers off of. The next step was to create my models for Users, Reactions, and Thoughts based on the parameters set in the assignments acceptance criteria. The next step was to create my routes files and build basic get requests to test the functionality of the application and check for errors. Once the routes were defined, the final step was to test and record each request to make sure that the routes were working properly. 
 
 Connection.js File
 
