@@ -1,4 +1,4 @@
-const { User, Thought } = require("../models");
+const { User, Thought, Reaction } = require("../models");
 const reactionSchema = require("../models/Reaction");
 const mongoose = require("mongoose");
 const { findById, findOneAndUpdate } = require("../models/User");
@@ -74,14 +74,15 @@ const thoughtController = {
       });
   },
   deleteReaction(req, res) {
-    Thought.findByIdAndDelete(
+    Thought.findByIdAndUpdate(
       { _id: req.params.thoughtId },
-      { $pull: { reactions: { reactionId: req.params.Id } } },
+      { $pull: { reactions: { reactionId: req.body.reactionId } } },
       { runValidators: true, new: true }
     )
       .then((thought) => {
         res.status(200).json(thought);
       })
+      Reaction.deleteOne()
       .catch((err) => {
         res.status(500).json(err);
         console.log("Create Reaction Error!");
